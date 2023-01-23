@@ -1,0 +1,9 @@
+{
+  "name": "@kanban/ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Jeremy Guillemet",
+  "license": "ISC"
+}
