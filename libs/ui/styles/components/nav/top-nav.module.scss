@@ -1,0 +1,29 @@
+.TopNavContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 16px;
+  background-color: var(--aside-bg);
+  border-bottom: 1px solid var(--line);
+
+  .ContainerLogo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    span {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 23px;
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+  }
+}
+
+.ButtonWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
