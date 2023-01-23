@@ -1,0 +1,89 @@
+.btn-back {
+  position: fixed;
+  bottom: 15px;
+  right: 5rem;
+  background: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  font-size: 1rem;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+  z-index: 600;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+
+.switch input {
+  cursor: pointer;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+}
+
+/* Container */
+.switch {
+  height: 28px;
+  margin: 23px auto;
+  position: relative;
+  width: 50px;
+}
+
+/* Background unchecked */
+.switch label {
+  background: var(--switch-theme-background);
+  border-radius: 999px;
+  display: block;
+  height: 100%;
+  position: relative;
+  transition: all .15s ease;
+  width: 100%;
+}
+
+/* Slider unchecked */
+.switch label span {
+  display: inline-flex;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: white;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  height: 24.42px;
+  width: 23.85px;
+  transition: left .15s ease;
+  z-index: 3;
+  color: #FFBF33;
+}
+
+.switch label div > .dark-theme {
+  display: none;
+}
+
+/* Checked States */
+.switch input:checked ~ label {
+  background: var(--switch-theme-background);
+}
+
+.switch input:checked ~ label span {
+  left: 24px;
+}
+
+@include dark() {
+  .switch label span {
+    background: var(--body-color);
+  }
+}
+
+@include down(968) {
+  .btn-back {
+    right: 15px;
+  }
+}

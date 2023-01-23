@@ -1,0 +1,275 @@
+header {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: var(--body-color);
+}
+
+.header-content .container.grid-2 {
+  grid-template-columns: 3.5fr 3fr;
+  min-height: calc(100vh - 6rem);
+  padding-bottom: 2.5rem;
+  text-align: left;
+}
+
+.header-content .container {
+  padding-right: 0;
+}
+
+.header-title {
+  font-size: 3.8rem;
+  line-height: 0.8;
+  color: var(--dark-primary);
+}
+
+.header-content .header-text {
+  margin: 2.15rem 0;
+  max-width: 85%;
+  text-align: justify;
+}
+
+.header-content .image {
+  max-width: 750px;
+  margin: auto;
+}
+
+.logo-shapes {
+  position: absolute;
+  width: 13.5%;
+  top: -15px;
+  left: -5px;
+  opacity: var(--opacity-shapes);
+}
+
+
+.dot {
+  position: absolute;
+}
+
+.column-1 {
+  margin-right: 1.5rem;
+}
+
+.column-2 {
+  margin-left: 1.5rem;
+}
+
+.image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+header .carre {
+  right: 68%;
+  top: 71%
+}
+
+header .circle {
+  left: 38%;
+  bottom: 63%;
+}
+
+header .dots {
+  position: absolute;
+  width: 420px;
+  bottom: -75px;
+  left: -150px;
+}
+
+header .wave {
+  bottom: 75%;
+  left: 20%;
+}
+
+header .wave2 {
+  bottom: 8%;
+  right: 55%;
+}
+
+header .half-circle {
+  left: 50%;
+  bottom: 82%;
+}
+
+header .half-circle2 {
+  left: 5%;
+  top: 67%;
+}
+
+header .triangle {
+  right: 17%;
+  bottom: 75%;
+}
+
+header .close {
+  right: 4%;
+  bottom: 50%;
+}
+
+header .dot-wave {
+  width: 90%;
+  top: 65%;
+  left: 72%;
+}
+
+.header-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 350px;
+}
+
+@media (max-width: 1280px) {
+  .column-1 {
+    margin-right: 1rem;
+  }
+
+  .column-2 {
+    margin-left: 1rem;
+  }
+  .overlay.overlay-lg .shape {
+    height: 35px;
+  }
+  .overlay.overlay-lg .shape.wave {
+    height: initial;
+    width: 63px;
+  }
+  .overlay.overlay-lg .shape.close {
+    height: 24px;
+  }
+
+
+  header .dots {
+    width: 270px;
+    bottom: -50px;
+    left: -75px;
+  }
+
+  header .dot-wave {
+    width: 340px;
+    top: 85%;
+    right: -20%;
+  }
+  header .logo-shapes {
+    width: 11%;
+  }
+
+  header .carre {
+    right: 68%;
+    top: 80%
+  }
+
+  header .circle {
+    left: 38%;
+    bottom: 63%;
+  }
+
+  header .dots {
+    position: absolute;
+    width: 420px;
+    bottom: -150px;
+    left: -150px;
+  }
+
+  header .wave {
+    bottom: 75%;
+    left: 20%;
+  }
+
+  header .wave2 {
+    bottom: 8%;
+    right: 40%;
+  }
+
+
+  header .half-circle2 {
+    left: 2%;
+    top: 50%;
+  }
+
+
+  header .close {
+    right: 2%;
+    bottom: 60%;
+  }
+
+
+  .header-content .container.grid-2 {
+    min-height: calc(100vh - 4.5rem);
+    padding-bottom: 1.5rem;
+  }
+
+}
+
+@include down(1128) {
+  .header-title {
+    font-size: 2.8rem;
+  }
+}
+
+@include down(1006) {
+  header .dot-wave {
+    top: 99%;
+  }
+}
+
+@include down(900) {
+  .header-content .container.grid-2 {
+    padding-bottom: 10rem;
+  }
+  .column-2 {
+    display: none;
+  }
+
+  header .carre {
+    right: 68%;
+    top: 70%
+  }
+  header .wave2 {
+    left: 58%;
+    top: 80%
+  }
+  header .half-circle {
+    left: 68%;
+    top: 70%
+  }
+  header .circle {
+    left: 50%;
+    bottom: 83%;
+  }
+}
+
+@include down(600) {
+  .header-content .container.grid-2 {
+    padding-left: 2rem;
+  }
+}
+
+@include down(464) {
+  .header-title {
+    font-size: 2.1rem;
+  }
+  .header-button {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 120px;
+  }
+}
+
+@include down(400) {
+  .header-title {
+    font-size: 1.8rem;
+  }
+  .header-content .header-text {
+    max-width: 100%;
+  }
+}
+
+@include up(2000) {
+  header .dot-wave {
+    left: 125%;
+  }
+}

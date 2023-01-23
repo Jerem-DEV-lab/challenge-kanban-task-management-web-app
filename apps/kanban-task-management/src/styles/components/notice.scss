@@ -1,0 +1,77 @@
+.review-section {
+  overflow: hidden;
+}
+
+.review-content {
+  margin-top: 6rem;
+}
+
+.reviews {
+  overflow: hidden;
+}
+
+.review {
+  position: relative;
+  padding: 2rem 1.5rem;
+}
+
+.quote {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--red);
+  opacity: 0.1;
+  font-size: 8rem;
+}
+
+
+.rate {
+  display: flex;
+  font-size: 1.4rem;
+  color: #ebc000;
+  margin-bottom: 1.5rem;
+}
+
+.rate i {
+  margin-right: 0.3rem;
+}
+
+.review-text {
+  font-size: 1.35rem;
+  font-weight: 300;
+  color: var(--dark-secondary);
+  line-height: 1.7;
+}
+
+
+.review-info {
+  margin-top: 2rem;
+}
+
+.review-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--dark-primary);
+}
+
+.review-job {
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: var(--dark-secondary);
+}
+
+
+.swiper-button-next {
+  right: 2rem;
+  left: initial;
+}
+
+.swiper-button-prev {
+  right: 4.5rem;
+  left: initial;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  display: none;
+}

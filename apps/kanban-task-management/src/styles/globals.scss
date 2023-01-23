@@ -1,0 +1,29 @@
+@import 'tools/reset';
+@import 'tools/function';
+@import 'tools/mixins';
+@import 'tools/typo';
+
+:root{
+  --body-color: hsl(220deg, 69%, 97%);
+  --typo: hsl(237deg, 100%, 4%);
+  --main-purple: hsl(242deg, 48%, 58%);
+  --main-purple-hover: hsl(243deg, 100%, 82%);
+  --aside-bg: hsl(0deg, 100%, 100%);
+  --dark-line: hsl(236deg, 11%, 27%);
+  --medium-grey: hsl(216deg, 15%, 57%);
+  --light-line: hsl(221deg, 69%, 94%);
+  --red: hsl(0deg, 78%, 63%);
+  --red-hover: hsl(0deg, 100%, 80%);
+  --font: 'Plus Jakarta Sans', sans-serif;
+  --space: 8px;
+}
+
+@include dark() {
+  --body-color: hsl(235deg, 16%, 15%);
+  --aside-bg: hsl(235deg, 12%, 19%);
+}
+
+body{
+  background-color: var(--body-color);
+  color: var(--typo);
+}
