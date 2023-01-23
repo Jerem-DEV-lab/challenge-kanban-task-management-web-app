@@ -1,4 +1,15 @@
+@import "../../tools/function.scss";
+@import "../../tools/mixins.scss";
+
 .aside {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: -600px;
+  left: 50%;
+  transition-property: opacity, visibility, top;
+  transition-duration: 1s;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   width: calc(100vw - 111px);
@@ -7,6 +18,15 @@
   background: var(--aside-bg);
   color: var(--medium-grey);
   border-radius: 8px;
+
+  &.asideOpen {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .6ms;
+    top: 80px;
+    transition-property: opacity, visibility, top;
+    transition-duration: 1s;
+  }
 }
 
 .asideTitle {
@@ -44,4 +64,10 @@
   border-radius: 0 100px 100px 0;
   color: var(--main-purple);
   margin-bottom: 16px;
+}
+
+@include up(768) {
+  .aside {
+    display: none;
+  }
 }

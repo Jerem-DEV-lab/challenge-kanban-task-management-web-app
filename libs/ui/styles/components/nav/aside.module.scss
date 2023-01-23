@@ -1,0 +1,102 @@
+@import '../../tools/function.scss';
+@import '../../tools/mixins.scss';
+
+.Aside {
+  display: none;
+  position: absolute;
+  top: 0;
+  transform: translateX(-100%);
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+  background-color: var(--aside-bg);
+  border-right: solid 1px var(--line);
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: .3s;
+  padding-bottom: 32px;
+
+  &.Open {
+    transform: translateX(0);
+  }
+}
+
+.WrapperHeaderAside {
+  display: flex;
+  padding: 0 24px;
+  flex-direction: column;
+}
+
+.ContainerLogo {
+  display: inline-flex;
+  color: var(--typo);
+  padding-top: 34px;
+  margin-bottom: 54px;
+}
+
+.WrapperButton {
+  padding-right: 24px;
+}
+
+button.HideSidebar {
+  justify-content: left !important;
+  font-size: 15px;
+  font-weight: 700;
+  margin-right: 34px;
+  color: var(--medium-grey);
+  padding-block: 14px !important;
+  border-radius: 0 100px 100px 0;
+
+  & svg {
+    margin-right: 10px;
+  }
+}
+
+button.ButtonHover:hover {
+  @include dark() {
+    background-color: hsl(0deg, 0%, 100%) !important;
+    color: var(--main-purple) !important;
+  }
+  background-color: var(--line) !important;
+  color: var(--main-purple) !important;
+}
+
+@include up(768) {
+  .Aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 260px;
+  }
+  .Nav {
+    margin-top: 20px;
+    flex: 1;
+
+    .AsideButton {
+      display: flex;
+      align-items: center;
+      margin-right: 24px;
+      padding: 16px 24px;
+      border-radius: 0 100px 100px 0;
+      color: var(--main-purple);
+      margin-bottom: 16px;
+
+      & span {
+        display: flex;
+        align-items: center;
+        margin-right: 12px;
+      }
+    }
+  }
+  .Title {
+    font-size: 12px;
+    letter-spacing: 2.4px;
+    color: var(--medium-grey);
+  }
+}
+
+@include up(1440) {
+  .Aside {
+    width: 300px;
+  }
+}

@@ -4,6 +4,7 @@ button.Button {
   cursor: pointer;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: .3s;
+  font-size: 15px;
 
   &:hover {
     background-color: var(--main-purple-hover);
@@ -11,6 +12,7 @@ button.Button {
 }
 
 button.ButtonWithLabel {
+  color: hsl(0, 0%, 100%);
   padding: 10px 18px;
   text-transform: capitalize;
 }

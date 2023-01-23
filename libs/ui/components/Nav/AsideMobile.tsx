@@ -2,11 +2,17 @@ import {IconBoard} from "../icons/IconBoard";
 import {SwitchDarkTheme} from "../Input/SwitchDarkTheme";
 import {ItemsAside} from "./ItemsAside";
 import Styles from "../../styles/components/nav/aside-mobile.module.scss";
+import {useDarkMode} from "../../hooks/useDarkMode";
+import clsx from "clsx";
 
+type AsideMobileProps = {
+    active?: boolean,
+}
 
-export const AsideMobile = () => {
+export const AsideMobile = ({active}: AsideMobileProps) => {
+    const {theme, toggleTheme} = useDarkMode();
     return <>
-        <aside className={Styles.aside}>
+        <aside className={clsx(Styles.aside, active && Styles.asideOpen)}>
             <span className={Styles.asideTitle}>Tous les tableaux (3)</span>
             <nav>
                 <ul>
@@ -29,7 +35,7 @@ export const AsideMobile = () => {
                     </li>
                 </ul>
             </nav>
-            <SwitchDarkTheme/>
+            <SwitchDarkTheme checked={theme} onChange={toggleTheme}/>
         </aside>
     </>
 }
