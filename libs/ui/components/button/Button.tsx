@@ -13,7 +13,7 @@ export const Button = (
     }: PropsWithChildren<ButtonAttributes & { outlined?: boolean }>) => {
     return <button
         disabled={disabled}
-        className={clsx(className && className, Styles.ButtonWithLabel, Styles.Button, outlined && Styles.OutlinedButton, disabled && Styles.ButtonDisabled, fullWidth && Styles.FullWidth)}>
+        className={clsx(className && className, Styles.ButtonWithLabel, outlined && Styles.OutlinedButton, disabled && Styles.ButtonDisabled, fullWidth && Styles.FullWidth)}>
         {children}
     </button>
 }

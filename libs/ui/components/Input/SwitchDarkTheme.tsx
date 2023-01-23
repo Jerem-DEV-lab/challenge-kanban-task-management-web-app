@@ -11,9 +11,8 @@ export const SwitchDarkTheme = ({checked, onChange}: SwitchDarkThemeProps) => {
         <IconLightTheme/>
         <input type="checkbox"
                id="themeSwitch"
-               checked={!!checked}
-               onChange={onChange}
-               className={Styles.switchThemeInput}/>
+               checked={checked}
+               onChange={onChange}/>
         <label htmlFor="themeSwitch">
             <span>Switch theme</span>
         </label>

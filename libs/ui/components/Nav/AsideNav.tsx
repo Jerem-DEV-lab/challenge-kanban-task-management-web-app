@@ -43,8 +43,8 @@ export const AsideNav = ({className, open}: AsideNavProps) => {
                     </li>
                 </ul>
             </nav>
+            <SwitchDarkTheme checked={theme} onChange={toggleTheme}/>
             <div>
-                <SwitchDarkTheme onChange={toggleTheme} checked={!!theme}/>
                 <div className={Styles.WrapperButton}>
                     <Button
                         fullWidth
