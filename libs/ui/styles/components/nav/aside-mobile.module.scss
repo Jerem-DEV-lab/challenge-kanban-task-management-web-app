@@ -1,0 +1,47 @@
+.aside {
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw - 111px);
+  min-height: 150px;
+  margin: 24px auto;
+  background: var(--aside-bg);
+  color: var(--medium-grey);
+  border-radius: 8px;
+}
+
+.asideTitle {
+  padding: 16px 22px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+.asideNavContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+  padding: 16px 24px;
+  border-radius: 0 100px 100px 0;
+
+  & span {
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+  }
+}
+
+.asideLinkActive {
+  background-color: var(--main-purple);
+  color: hsl(0deg, 100%, 100%);
+}
+
+.AsideButton {
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+  padding: 16px 24px;
+  border-radius: 0 100px 100px 0;
+  color: var(--main-purple);
+  margin-bottom: 16px;
+}

@@ -5,5 +5,21 @@
   "main": "index.js",
   "keywords": [],
   "author": "Jeremy Guillemet",
-  "license": "ISC"
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "4.9.4",
+    "next": "13.1.4"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "sass": "^1.57.1",
+    "@kanban/typescript": "workspace:^1.0.0"
+  },
+  "dependencies": {
+    "clsx": "^1.2.1"
+  }
 }

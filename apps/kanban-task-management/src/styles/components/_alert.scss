@@ -1,0 +1,45 @@
+.alert {
+  position: relative;
+  display: flex;
+  padding: 6px 16px;
+  width: 100%;
+  margin-bottom: 1rem;
+  line-height: 1.43;
+  border-radius: .25rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.alert-success {
+  background: rgb(187, 255, 187);
+  color: rgb(30, 70, 32);
+}
+
+.alert-error {
+  color: rgb(97, 26, 21);
+  background-color: rgb(253, 236, 234);
+}
+
+.alert-icon {
+  display: flex;
+  opacity: 0.9;
+  padding: 7px 0;
+  margin-right: 12px;
+  color: inherit;
+}
+
+.alert-icon svg {
+  height: 1.5em;
+  width: 1.5em;
+  color: inherit;
+}
+
+.alert-message {
+  padding: 8px 0;
+}
+
+.alert-message-title {
+  margin-top: -2px;
+  font-weight: 500;
+  margin-bottom: 0.35em;
+}

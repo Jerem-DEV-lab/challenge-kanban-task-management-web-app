@@ -1,0 +1,41 @@
+button.Button {
+  color: var(--typo);
+  background-color: var(--main-purple);
+  cursor: pointer;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: .3s;
+
+  &:hover {
+    background-color: var(--main-purple-hover);
+  }
+}
+
+button.ButtonWithLabel {
+  padding: 10px 18px;
+  text-transform: capitalize;
+}
+
+button.Contained {
+  padding: 10px 18px;
+}
+
+button.OutlinedButton {
+  background-color: transparent;
+}
+
+button.ButtonRounded {
+  border-radius: 24px;
+}
+
+button.FullWidth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+button.ButtonDisabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: .5;
+}
