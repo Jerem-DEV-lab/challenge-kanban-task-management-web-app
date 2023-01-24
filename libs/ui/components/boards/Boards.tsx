@@ -13,16 +13,16 @@ export const Boards = ({board}: BoardProps) => {
     return board.columns.length > 0 ?
         <div className={Styles.Grid}
              style={{"--grid-cols": board.columns.length + 1} as CSSProperties}>
-            {board.columns.map((column, index) => (<div>
+            {board.columns.map((column, index) => (<div key={index}>
                 <h3 className={Styles.BoardColumnTitle}>
                         <span
                             className={Styles.BoardColumnTitleBadge}
                             style={{backgroundColor: column.color ? column.color : randomColor()}}/>
                     {column.title}&nbsp;({column.tasks.length})
                 </h3>
-                <div key={index} className={Styles.BoardColumn}>
-                    {column.tasks.length > 0 ? column.tasks.map((task, index) => (
-                        <div className={Styles.Task} key={index}>
+                <div className={Styles.BoardColumn}>
+                    {column.tasks.length > 0 ? column.tasks.map((task, key) => (
+                        <div className={Styles.Task} key={key}>
                             {task.title}
                             <span> {task.subtasks.length > 0 ? <span>
                                     {getTotalCheckedSubtasks(task.subtasks)} sur {task.subtasks.length} tâche(s) secondaire(s)
