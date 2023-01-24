@@ -10,9 +10,10 @@ import {useDarkMode} from "../../hooks/useDarkMode";
 
 type AsideNavProps = {
     className?: string,
-    open: boolean
+    open: boolean,
+    openAsideNav: () => void
 }
-export const AsideNav = ({className, open}: AsideNavProps) => {
+export const AsideNav = ({className, open, openAsideNav}: AsideNavProps) => {
     const {theme, toggleTheme} = useDarkMode();
     return <>
         <aside className={clsx(Styles.Aside, open && Styles.Open, className && className)}>
@@ -34,7 +35,7 @@ export const AsideNav = ({className, open}: AsideNavProps) => {
                         <ItemsAside label="Roadmap"/>
                     </li>
                     <li>
-                        <button className={Styles.AsideButton}>
+                        <button className={Styles.AsideButton} >
                             <span>
                                 <IconBoard/>
                             </span>
@@ -49,6 +50,7 @@ export const AsideNav = ({className, open}: AsideNavProps) => {
                     <Button
                         fullWidth
                         outlined
+                        onClick={openAsideNav}
                         className={clsx(Styles.HideSidebar, Styles.ButtonHover)}>
                         <IconHide/>&nbsp;Cacher la navigation</Button>
                 </div>

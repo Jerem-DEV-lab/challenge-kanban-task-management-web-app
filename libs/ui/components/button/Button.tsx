@@ -9,10 +9,11 @@ export const Button = (
         className = undefined,
         fullWidth,
         disabled = false,
-        outlined
+        outlined, onClick
     }: PropsWithChildren<ButtonAttributes & { outlined?: boolean }>) => {
     return <button
         disabled={disabled}
+        onClick={onClick}
         className={clsx(className && className, Styles.ButtonWithLabel, outlined && Styles.OutlinedButton, disabled && Styles.ButtonDisabled, fullWidth && Styles.FullWidth)}>
         {children}
     </button>

@@ -1,18 +1,141 @@
-import {AsideMobile, AsideNav, TopNav} from "@kanban/ui";
-import {useToggle} from "@kanban/ui/hooks/useToggle";
-import {useWindowSize} from "@kanban/ui/hooks/useWindowSize";
-import React, {useState} from "react";
+import React from "react";
+import {Boards, WrapperApp} from "@kanban/ui/components";
+import type {Board} from "@kanban/typescript"
 
-export default function Home() {
-    const {toggle, state} = useToggle(false)
-    const [asideNav] = useState<boolean>(true);
-    const size = useWindowSize()
-    return <div style={{position: "relative"}}>
-        <TopNav stateAside={asideNav} toggleAsideMobile={toggle} asideMobileOpen={state}/>
-        {size.width > 768 ? <AsideNav open={asideNav}/> : null}
-        {size.width < 768 ? <AsideMobile active={state}/> : null}
-        <main>
-        </main>
-    </div>
+const board: Board ={
+    title: "Test",
+    columns: [
+        {
+            id: " 1",
+            title: "Todo",
+            color: "#49C4E5",
+            tasks: [
+                {
+                    id: " 1",
+                    title: "une tâche",
+                    description: "une description",
+                    status: false,
+                    position: 1,
+                    subtasks: []
+                },
+                {
+                    id: " 1",
+                    title: "une tâche",
+                    description: "une description",
+                    status: false,
+                    position: 1,
+                    subtasks: []
+                },
+                {
+                    id: " 1",
+                    title: "une tâche",
+                    description: "une description",
+                    status: false,
+                    position: 1,
+                    subtasks: [
+                        {
+                            id: " 1",
+                            title: "une tâche",
+                            status: true,
+                        },
+                        {
+                            id: " 1",
+                            title: "une tâche",
+                            status: false,
+                        },]
+                },
+                {
+                    id: " 1",
+                    title: "une tâche",
+                    description: "une description",
+                    status: false,
+                    position: 1,
+                    subtasks: []
+                },
+            ]
+        },
+        {
+            id: " 1",
+            title: "Doing",
+            color: "#8471F2",
+            tasks: [
+                {
+                    id: " 1",
+                    title: "une tâche",
+                    description: "une description",
+                    status: false,
+                    position: 1,
+                    subtasks: []
+                },
+                {
+                    id: " 1",
+                    title: "une tâche",
+                    description: "une description",
+                    status: false,
+                    position: 1,
+                    subtasks: []
+                },
+                {
+                    id: " 1",
+                    title: "une tâche",
+                    description: "une description",
+                    status: false,
+                    position: 1,
+                    subtasks: []
+                },
+                {
+                    id: " 1",
+                    title: "une tâche",
+                    description: "une description",
+                    status: false,
+                    position: 1,
+                    subtasks: []
+                },
+            ]
+        },
+        {
+            id: " 1",
+            title: "Done",
+            color: "#67E2AE",
+            tasks: [
+                {
+                    id: " 1",
+                    title: "une tâche",
+                    description: "une description",
+                    status: false,
+                    position: 1,
+                    subtasks: []
+                },
+                {
+                    id: " 1",
+                    title: "une tâche",
+                    description: "une description",
+                    status: false,
+                    position: 1,
+                    subtasks: []
+                },
+                {
+                    id: " 1",
+                    title: "une tâche",
+                    description: "une description",
+                    status: false,
+                    position: 1,
+                    subtasks: []
+                },
+                {
+                    id: " 1",
+                    title: "une tâche",
+                    description: "une description",
+                    status: false,
+                    position: 1,
+                    subtasks: []
+                },
+            ]
+        }]
 }
-
+/*const Portal = dynamic(async () => (await import('@/components/portal/Portal')), {ssr: false})*/
+export default function Home() {
+    return <WrapperApp>
+        <Boards board={board}/>
+    </WrapperApp>
+}

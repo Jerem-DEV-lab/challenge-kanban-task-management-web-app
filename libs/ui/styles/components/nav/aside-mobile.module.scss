@@ -45,6 +45,15 @@
   border-radius: 0 100px 100px 0;
   color: var(--medium-grey);
 
+  &:not(.asideLinkActive):hover {
+    background-color: hsl(245, 52%, 96%);
+    color: var(--main-purple);
+    @include dark() {
+      background-color: hsl(0deg, 0%, 100%);
+      color: var(--main-purple);
+    }
+  }
+
   & span {
     display: flex;
     align-items: center;
@@ -55,6 +64,10 @@
 .asideLinkActive {
   background-color: var(--main-purple);
   color: hsl(0deg, 100%, 100%);
+
+  &:hover {
+    color: hsl(0deg, 100%, 100%);
+  }
 }
 
 .AsideButton {
