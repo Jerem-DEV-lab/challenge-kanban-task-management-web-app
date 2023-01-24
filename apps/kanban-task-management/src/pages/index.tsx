@@ -9,7 +9,7 @@ export default function Home() {
     const size = useWindowSize()
     return <div style={{position: "relative"}}>
         <TopNav stateAside={asideNav} toggleAsideMobile={toggle} asideMobileOpen={state}/>
-        <AsideNav open={asideNav}/>
+        {size.width > 768 ? <AsideNav open={asideNav}/> : null}
         {size.width < 768 ? <AsideMobile active={state}/> : null}
         <main>
         </main>
