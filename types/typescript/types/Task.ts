@@ -14,6 +14,7 @@ export type Task = {
     description: string,
     status: boolean,
     position: number,
+    columnId: string,
     subtasks: Subtask[] | [],
 }
 export type Subtask = {

@@ -1,11 +1,11 @@
-import {useToggle} from "../hooks/useToggle";
-import {useWindowSize} from "../hooks/useWindowSize";
-import {TopNav} from "./Nav/TopNav";
-import {AsideNav} from "./Nav/AsideNav";
-import {AsideMobile} from "./Nav/AsideMobile";
-import {ButtonOpenAside} from "./button/ButtonOpenAside";
+import {useToggle} from "../../hooks/useToggle";
+import {useWindowSize} from "../../hooks/useWindowSize";
+import {TopNav} from "../Nav/TopNav";
+import {AsideNav} from "../Nav/AsideNav";
+import {AsideMobile} from "../Nav/AsideMobile";
+import {ButtonOpenAside} from "../button/ButtonOpenAside";
 import type {PropsWithChildren} from "react";
-import Styles from '../styles/wrapper-app.module.scss'
+import Styles from '../../styles/wrapper-app.module.scss'
 import clsx from "clsx";
 
 export const WrapperApp = ({children}: PropsWithChildren) => {

@@ -1,0 +1,49 @@
+@import '../../tools/function';
+@import '../../tools/mixins';
+
+.InputGroupWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 8px;
+}
+
+.Label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--medium-grey);
+  line-height: 15px;
+  @include dark() {
+    color: var(--typo);
+  }
+}
+
+.Input {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: solid 1px rgba(#828FA3, .25);
+  outline: none;
+  background-color: transparent;
+  line-height: 1.5;
+  font-size: 14px;
+  color: var(--typo);
+  transition: outline-color .3s ease-in-out;
+
+  &:focus, &:active {
+    outline: var(--main-purple) solid 2px;
+    outline-offset: -2px;
+  }
+
+  &::placeholder {
+    color: rgba(#818ea2, .5);
+  }
+}
+
+textarea.Input {
+  resize: none;
+  height: 112px;
+}
+
+select.Input{
+  background: var(--aside-bg)
+}

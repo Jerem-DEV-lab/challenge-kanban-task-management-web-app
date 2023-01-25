@@ -4,5 +4,9 @@ export {TopNav} from "./Nav/TopNav";
 export {Button} from "./button/Button";
 export {ButtonOpenAside} from "./button/ButtonOpenAside";
 export {IconShow} from './icons/IconShow';
-export {WrapperApp} from './WrapperApp';
+export {IconCross} from './icons/IconCross';
+export {WrapperApp} from './wrapper/WrapperApp';
 export {Boards} from './boards/Boards';
+export {ModalAddTask} from './modal/ModalAddTask';
+export {InputGroup} from './input/InputGroup'
+export {WrapperAutoClose} from './wrapper/WrapperRefAutoClose'

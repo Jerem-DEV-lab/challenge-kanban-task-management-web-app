@@ -3,7 +3,7 @@ import {Logo} from "../icons/Logo";
 import clsx from "clsx";
 import {ItemsAside} from "./ItemsAside";
 import {IconBoard} from "../icons/IconBoard";
-import {SwitchDarkTheme} from "../Input/SwitchDarkTheme";
+import {SwitchDarkTheme} from "../input/SwitchDarkTheme";
 import {IconHide} from "../icons/IconHide";
 import {Button} from '../button/Button';
 import {useDarkMode} from "../../hooks/useDarkMode";
