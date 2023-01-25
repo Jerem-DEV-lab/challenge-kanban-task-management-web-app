@@ -1,0 +1,100 @@
+@import '../../tools/function';
+@import '../../tools/mixins';
+
+.ModalWrapper {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  inset: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Overlay{
+  position: fixed;
+  inset: 0;
+}
+
+.Modal {
+  position: absolute;
+  z-index: 99999;
+  border-radius: 6px;
+  background-color: var(--aside-bg);
+  padding: 24px;
+  max-width: 480px;
+  width: 100%;
+}
+
+.ModalTitle {
+  text-align: left;
+  width: max-content;
+  font-size: 18px;
+  margin: 0 0 24px 0;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+
+.GroupInput {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.GroupInputSubtask {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  svg {
+    color: var(--medium-grey);
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+
+    &:hover {
+      color: var(--red)
+    }
+  }
+}
+
+.GroupInputSubtask input {
+  width: 100%;
+}
+
+.Stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.Button, %Button {
+  padding: 8px;
+  border-radius: 100px;
+  color: var(--main-purple);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 23px;
+}
+
+.ButtonAddSubtask {
+  background-color: hsla(242, 48%, 58%, 0.1);
+  @include dark() {
+    background-color: hsl(0, 0%, 100%);
+  }
+}
+
+.SpacingTop {
+  margin-top: 24px;
+}
+
+.ButtonAdd {
+  @extend %Button;
+  background-color: var(--main-purple);
+  color: hsl(0, 0%, 100%);
+  transition: background-color .3s ease-in-out;
+  &:hover{
+    background-color: var(--main-purple-hover);
+  }
+}

@@ -1,0 +1,100 @@
+@import '../../tools/function';
+@import '../../tools/mixins';
+
+.Grid {
+  --grid-cols: 1;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(var(--grid-cols), 280px);
+}
+
+.BoardColumn {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border-radius: 6px;
+  gap: 20px;
+  width: 280px;
+
+  span {
+    font-weight: 700;
+    font-size: 20px;
+    transition-property: color;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      @include dark() {
+        color: var(--main-purple-hover);
+      }
+      color: var(--main-purple);
+      cursor: pointer;
+    }
+  }
+}
+
+.EmptyColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 26px;
+  }
+}
+
+.BoardNewColumn {
+  @include dark() {
+    background: linear-gradient(180deg, rgba(43, 44, 55, 0.25) 0%, rgba(43, 44, 55, 0.125) 100%);
+  }
+  color: var(--medium-grey);
+  background: linear-gradient(180deg, #E9EFFA 0%, rgba(233, 239, 250, 0.5) 100%);
+  align-items: center;
+  justify-content: center;
+}
+
+.BoardColumn .Task {
+  cursor: grab;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 23px 16px;
+  gap: 16px;
+  border-radius: 8px;
+  background-color: var(--aside-bg);
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+
+  span {
+    display: block;
+    font-size: 12px;
+    color: var(--medium-grey);
+    font-weight: 700;
+    cursor: default;
+    width: max-content;
+  }
+}
+
+.BoardColumnTitle {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+  color: var(--medium-grey);
+  font-size: 12px;
+  letter-spacing: 2.4px;
+}
+
+.BoardColumnTitleBadge {
+  display: inline-block;
+  margin-right: 12px;
+  border-radius: 100px;
+  width: 15px;
+  height: 15px;
+}

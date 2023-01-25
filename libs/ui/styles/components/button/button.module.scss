@@ -1,3 +1,5 @@
+@import "../../tools/function";
+@import "../../tools/mixins";
 button.Button {
   color: hsl(0, 0%, 100%);
   background-color: var(--main-purple);
@@ -41,4 +43,22 @@ button.ButtonDisabled {
   cursor: not-allowed;
   pointer-events: none;
   opacity: .5;
+}
+
+button.ButtonShow {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 32px;
+  padding: 20px 22px;
+  background-color: var(--main-purple);
+  border-radius: 0 100px 100px 0;
+
+  &:hover {
+    background-color: var(--main-purple-hover);
+  }
+
+  @include up(768){
+    display: block;
+  }
 }

@@ -13,11 +13,13 @@
   border-right: solid 1px var(--line);
   transition-property: transform;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  transition-duration: .3s;
+  transition-duration: .100s;
   padding-bottom: 32px;
-
   &.Open {
     transform: translateX(0);
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: .50s;
   }
 }
 

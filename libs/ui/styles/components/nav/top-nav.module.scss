@@ -43,6 +43,7 @@
   .AsideOpen {
     display: inline-block;
     padding-left: 60px;
+    transition: padding-left 0.3s ease-in-out;
   }
   .ContainerLogoLG {
     display: flex;

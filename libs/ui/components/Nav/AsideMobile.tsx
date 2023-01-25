@@ -1,5 +1,5 @@
 import {IconBoard} from "../icons/IconBoard";
-import {SwitchDarkTheme} from "../Input/SwitchDarkTheme";
+import {SwitchDarkTheme} from "../input/SwitchDarkTheme";
 import {ItemsAside} from "./ItemsAside";
 import Styles from "../../styles/components/nav/aside-mobile.module.scss";
 import {useDarkMode} from "../../hooks/useDarkMode";
